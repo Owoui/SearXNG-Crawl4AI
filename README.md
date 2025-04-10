@@ -1,4 +1,4 @@
-# Sear-Crawl4AI
+# SearCrawl
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -6,7 +6,7 @@
 
 ## 简介
 
-Sear-Crawl4AI 是一个基于 SearXNG 和 Crawl4AI 的开源搜索和爬取工具，可作为 Tavily 的开源替代品。它提供了类似的搜索和网页内容提取功能，但完全开源且可自定义配置。
+SearCrawl 是一个基于 SearXNG 和 Crawl4AI 的开源搜索和爬取工具，可作为 Tavily 的开源替代品。它提供了类似的搜索和网页内容提取功能，但完全开源且可自定义配置。
 
 主要功能：
 - 通过 SearXNG 搜索引擎获取搜索结果
@@ -26,8 +26,8 @@ Sear-Crawl4AI 是一个基于 SearXNG 和 Crawl4AI 的开源搜索和爬取工�
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/sear-crawl4AI-plugin.git
-cd sear-crawl4AI-plugin
+git clone https://github.com/Bclound/searCrawl.git
+cd searCrawl
 ```
 
 2. 安装依赖
@@ -64,7 +64,7 @@ POST /search
 {
   "query": "搜索关键词",
   "limit": 10,
-  "disabled_engines": "wikipedia__general,currency__general",
+  "disabled_engines": "wikipedia__general,currency__general,wikidata__general,duckduckgo__general,google__general,lingva__general,qwant__general,startpage__general,dictzone__general,mymemory translated__general,brave__general",
   "enabled_engines": "baidu__general"
 }
 ```
@@ -72,8 +72,8 @@ POST /search
 参数说明：
 - `query`: 搜索查询字符串（必填）
 - `limit`: 返回结果数量限制，默认为10
-- `disabled_engines`: 禁用的搜索引擎列表，逗号分隔
-- `enabled_engines`: 启用的搜索引擎列表，逗号分隔
+- `disabled_engines`: 禁用的搜索引擎列表，逗号分隔，您可以在searXNG的COOKIES中复制
+- `enabled_engines`: 启用的搜索引擎列表，逗号分隔，您可以在searXNG的COOKIES中复制
 
 响应：
 ```json

@@ -1,4 +1,4 @@
-# Sear-Crawl4AI
+# SearCrawl
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Sear-Crawl4AI is an open-source search and crawling tool based on SearXNG and Crawl4AI, serving as an open-source alternative to Tavily. It provides similar search and web content extraction capabilities while being fully open-source and customizable.
+SearCrawl is an open-source search and crawling tool based on SearXNG and Crawl4AI, serving as an open-source alternative to Tavily. It provides similar search and web content extraction capabilities while being fully open-source and customizable.
 
 Key Features:
 - Search results retrieval through SearXNG search engine
@@ -26,8 +26,8 @@ Key Features:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/sear-crawl4AI-plugin.git
-cd sear-crawl4AI-plugin
+git clone https://github.com/Bclound/searCrawl.git
+cd searCrawl
 ```
 
 2. Install dependencies
@@ -64,7 +64,7 @@ Request body:
 {
   "query": "search keywords",
   "limit": 10,
-  "disabled_engines": "wikipedia__general,currency__general",
+  "disabled_engines": "wikipedia__general,currency__general,wikidata__general,duckduckgo__general,google__general,lingva__general,qwant__general,startpage__general,dictzone__general,mymemory translated__general,brave__general",
   "enabled_engines": "baidu__general"
 }
 ```
@@ -72,8 +72,8 @@ Request body:
 Parameters:
 - `query`: Search query string (required)
 - `limit`: Maximum number of results to return, default is 10
-- `disabled_engines`: List of disabled search engines, comma-separated
-- `enabled_engines`: List of enabled search engines, comma-separated
+- `disabled_engines`: List of disabled search engines, comma-separated, you can copy it from the COOKIES of searXNG.
+- `enabled_engines`: List of enabled search engines, comma-separated, you can copy it from the COOKIES of searXNG.
 
 Response:
 ```json
